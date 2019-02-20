@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vidia Print</title>
+  <link rel="icon" href="img/logo1.png" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="css/resume.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <!-- <link href="css/datatable.css" rel="stylesheet"> -->
+  <style>
+    a {
+      cursor: pointer;
+    }
+
+    .help-block {
+      font-size: 12px;
+      color: #a94442;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <div>
+      <ul class="navbar-nav" style="margin-top: -5px">
+        <li>
+          <a href="/faq" id="foot">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a href="/tnc" id="foot">Terms & Condition</a>
+        </li>
+        <li class="nav-item">
+          <a href="/privacy" id="foot">Privacy Policy</a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </div>
+    <div>
+      <span class="fa-stack fa-xs">
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+    <div>
+      <span class="fa-stack fa-xs">
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+    <div>
+      <span class="fa-stack fa-xs">
+        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+    <div>
+      <span class="fa-stack fa-xs">
+        <img src="img/logo2.png" style="width: 40px">
+      </span>
+    </div>
+  </nav>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/resume.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="css\dt3.js"></script> -->
+<!-- <script src="css\dt2.js"></script> -->
+
+  <script>
+    $(document).ready(function () {
+      $(".nav-link").on('click', function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+  <!--This include is required
+  <script src="../node_modules/react-rx-bing-map/dist/bingMapsExample.js"></script>
+  -->
+
+  <script>
+    // Select all links with hashes
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function (event) {
+        debugger;
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function () {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+      
+   
+  </script>
+<script type="text/javascript" src="bundle.js"></script></body>
+
+</html>
