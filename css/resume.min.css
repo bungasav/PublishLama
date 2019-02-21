@@ -3,12 +3,17 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-body {
+ html, body
+	{
+		height: 100%;
+    }
+    
+ body {
     font-family: 'Open Sans',serif;
     padding-top: 54px;
     color: #868e96;
     height: 100%;
-    margin: 0;
+    margin: 0px;
     background-color: #1FA2A6 !important;;
 }
 
@@ -505,7 +510,7 @@ input:checked + .slide-container  .slide {
 input:checked + .slide-container .nav label { display: block; }
 
 .nav-dots {
-    width: 80%;
+    width: 90%;
     bottom: 40px;
     height: 11px;
     display: block;
@@ -609,6 +614,13 @@ input#img-7:checked ~ .nav-dots label#img-dot-7 {
     top:13%;
     max-width: 30%;
 }
+
+.counters {
+    position:absolute;
+    left:33%;
+    top:13%;
+    max-width: 30%;
+}
 #over {
     position:absolute;
     left:12%;
@@ -638,8 +650,13 @@ input#img-7:checked ~ .nav-dots label#img-dot-7 {
 {
     margin: auto;
     margin-bottom: 0.6em;
+    
 }
 
+.container-after-nav {
+    margin-top:54px!important;
+    margin:auto;
+}
 .printloc
 {
     margin-left:-180px;
@@ -822,4 +839,47 @@ h1{
       transform: rotate(360deg);
     }
   }
-  
+
+
+  .paging {
+    display: inline-block;
+}
+
+.paging a {
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.paging a.active {
+    background-color: #0E7771;
+    color: white;
+    border-radius: 5px;
+}
+
+.paging a:hover {
+    text-decoration: none;
+    color:#0E7771;
+}
+.paging a:hover:not(.active) {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.paging a:hover.active {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.center-div{
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
