@@ -44544,8 +44544,7 @@ var HomePage = function (_React$Component) {
                         var response = {
                             file: a[i]
                         };
-
-                        window.open('http://api.vidiaprint.com' + response.file);
+                        window.open(response.file);
                     }
                 }, 1000);
             } else {
