@@ -41489,12 +41489,12 @@ function authHeader() {
 
 
 Object.defineProperty(exports, "__esModule", {
-   value: true
+    value: true
 });
 exports.urlAPI = urlAPI;
 function urlAPI() {
-   // return 'https://api.vidiaprint.com/';
-   return 'https://localhost:44334/';
+    return 'https://api.vidiaprint.com/';
+    // return 'https://localhost:44334/';
 }
 
 /***/ }),
