@@ -41489,11 +41489,12 @@ function authHeader() {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+   value: true
 });
 exports.urlAPI = urlAPI;
 function urlAPI() {
-    return 'https://api.vidiaprint.com/';
+   // return 'https://api.vidiaprint.com/';
+   return 'https://localhost:44334/';
 }
 
 /***/ }),
@@ -44605,35 +44606,28 @@ var HomePage = function (_React$Component) {
         value: function upload(token) {
             var formData = new FormData();
             var data = document.querySelector('input[type="file"]').files[0]; //file
-            var fu1 = document.getElementById("choose");
-            var nam = fu1.value.includes('jpg');
-            var nam2 = fu1.value.includes('jpeg');
-            var nam3 = fu1.value.includes('png');
-            if (nam == false && nam2 == false && nam3 == false) {
-                formData.append('file', data);
-                this.loading(true);
-                fetch((0, _helpers.urlAPI)() + 'api/Userfiles', { // Your POST endpoint
-                    // fetch('https://demo.visionet.co.id/VidiaPrintAPI/api/upload', { // Your POST endpoint
-                    method: 'POST',
-                    headers: {
-                        'Authorization': 'Bearer ' + token
-                    },
-                    body: formData // This is your file object
-                }).then(function (response) {
-                    return response.json();
-                }
-                // handleResponse// if the response is a JSON object
-                ).then(function (success) {
-                    return window.location.reload();
-                } // Handle the success response object
-                ).catch(function (error) {
-                    return alert(error);
-                } // Handle the error response object
-                //window.location.reload(),
-                );
-            } else {
-                alert('Currently can not upload file with type jpg / jpeg / png');
+            formData.append('file', data);
+            this.loading(true);
+            debugger;
+            fetch((0, _helpers.urlAPI)() + 'api/Userfiles', { // Your POST endpoint
+                // fetch('https://demo.visionet.co.id/VidiaPrintAPI/api/upload', { // Your POST endpoint
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                },
+                body: formData // This is your file object
+            }).then(function (response) {
+                return response.json();
             }
+            // handleResponse// if the response is a JSON object
+            ).then(function (success) {
+                return window.location.reload();
+            } // Handle the success response object
+            ).catch(function (error) {
+                return alert(error);
+            } // Handle the error response object
+            //window.location.reload(),
+            );
         }
     }, {
         key: 'onPageChanged',
@@ -45386,7 +45380,7 @@ var HomePage = function (_React$Component) {
                                         _react2.default.createElement(
                                             'form',
                                             { encType: 'multipart/form-data', action: '' },
-                                            _react2.default.createElement('input', { type: 'file', name: 'upload', id: 'choose', accept: '.doc, .docx, .ppt, .pptx, .xls, .pdf', href: '',
+                                            _react2.default.createElement('input', { type: 'file', name: 'upload', id: 'choose', accept: '.doc, .docx, .ppt, .pptx, .xls, .pdf, .jpg, .jpeg, .png', href: '',
                                                 onChange: function onChange() {
                                                     return _this3.upload(user.access_token);
                                                 } })
