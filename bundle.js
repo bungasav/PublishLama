@@ -44445,7 +44445,7 @@ var HomePage = function (_React$Component) {
 
                     console.log('el', el);
 
-                    fetch('https://api.vidiaprint.com/api/userfiles/' + el, {
+                    fetch('https://api.vidiaprint.id/api/userfiles/' + el, {
                         // fetch('http://demo.visionet.co.id/VidiaPrintAPI/api/userfiles/DeleteFile?DeleteFile', {
                         method: 'DELETE',
                         headers: (0, _helpers.authHeader)()
@@ -44485,7 +44485,7 @@ var HomePage = function (_React$Component) {
             var data = document.querySelector('input[type="file"]').files[0]; //file
             formData.append('file', data);
             this.loading(true);
-            fetch('https://api.vidiaprint.com/api/Userfiles', { // Your POST endpoint
+            fetch('https://api.vidiaprint.id/api/Userfiles', { // Your POST endpoint
                 // fetch('https://demo.visionet.co.id/VidiaPrintAPI/api/upload', { // Your POST endpoint
                 method: 'POST',
                 headers: {
@@ -45266,6 +45266,81 @@ var HomePage = function (_React$Component) {
                                                 onChange: function onChange() {
                                                     return _this3.upload(user.access_token);
                                                 } })
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'section',
+                        { className: 'resume-section p-3 p-lg-5 printloc', id: 'location', style: { marginRight: "-1.3%", backgroundColor: "165,197,238 " } },
+                        _react2.default.createElement(
+                            'p',
+                            { style: { marginLeft: "auto", marginRight: "auto", textAlign: "center" } },
+                            _react2.default.createElement('img', { src: 'img/location.png', style: { width: "15%", marginTop: "60px" }, className: 'auto' })
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { style: { marginLeft: "-4%", marginRight: "-3.8%" } },
+                            _react2.default.createElement(_reactBingmaps.ReactBingmaps, {
+                                bingmapKey: 'ApBMci7WkN2Da-QucJ20ohk4Z9lNZZ3drO5Z8vIoOO5xGP54wippfiscHdAT25cB'
+                                //center={-_infoboxesWithPushPins}
+                                //heading={180}
+
+                                , center: [-6.234662, 106.6043222],
+                                zoom: 14,
+                                infoboxesWithPushPins: _infoboxesWithPushPins
+                            })
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'footMap' },
+                            _react2.default.createElement(
+                                'table',
+                                { style: { marginLeft: "150px" } },
+                                _react2.default.createElement(
+                                    'tbody',
+                                    null,
+                                    _react2.default.createElement(
+                                        'tr',
+                                        null,
+                                        _react2.default.createElement(
+                                            'td',
+                                            null,
+                                            _react2.default.createElement(
+                                                'p',
+                                                { style: { fontWeight: "bold" } },
+                                                ' CONTACT US'
+                                            )
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'tr',
+                                        null,
+                                        _react2.default.createElement(
+                                            'td',
+                                            { style: { width: "70%" } },
+                                            _react2.default.createElement(
+                                                'p',
+                                                null,
+                                                'VIDIA PRINT',
+                                                _react2.default.createElement('br', null),
+                                                'Gd. Lippo Kuningan Lt.17 unit A & EF Jl. HR Rasuna Said KAV. B-12',
+                                                _react2.default.createElement('br', null),
+                                                'Karet Kuningan - Setiabudi Jakarta Selatan'
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'td',
+                                            { style: { width: "30%" } },
+                                            _react2.default.createElement(
+                                                'p',
+                                                { style: { marginLeft: "40px" } },
+                                                '(+62)21 55777678',
+                                                _react2.default.createElement('br', null),
+                                                'vidia@visionet.co.id'
+                                            )
                                         )
                                     )
                                 )
