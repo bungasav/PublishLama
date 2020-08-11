@@ -44560,21 +44560,23 @@ var HomePage = function (_React$Component) {
             }
             var _infoboxesWithPushPins = [];
 
-            if (location.items) {
-                {
-                    location.items.map(function (file, index) {
-                        var geo = file.GeoLocation.split(",");
-                        _infoboxesWithPushPins.push({
-                            "location": geo,
-                            "addHandler": "mouseover",
-                            "infoboxOption": { title: file.Name, description: file.Address + ', ' + file.City },
-                            "pushPinOption": { title: file.Name, description: file.Address + ', ' + file.City },
-                            "infoboxAddHandler": { "type": "click", callback: _this3.callBackMethod },
-                            "pushPinAddHandler": { "type": "click", callback: _this3.callBackMethod }
-                        });
-                    });
-                }
-            }
+            // if (location.items) {
+            //     {
+            //         location.items.map((file, index) => {
+            //             let geo = file.GeoLocation.split(",");
+            //             _infoboxesWithPushPins.push(
+            //                 {
+            //                     "location": geo,
+            //                     "addHandler": "mouseover",
+            //                     "infoboxOption": { title: file.Name, description: file.Address + ', ' + file.City },
+            //                     "pushPinOption": { title: file.Name, description: file.Address + ', ' + file.City },
+            //                     "infoboxAddHandler": { "type": "click", callback: this.callBackMethod },
+            //                     "pushPinAddHandler": { "type": "click", callback: this.callBackMethod }
+            //                 })
+            //         }
+            //         )
+            //     }
+            // }
 
             return _react2.default.createElement(
                 'div',
@@ -45266,81 +45268,6 @@ var HomePage = function (_React$Component) {
                                                 onChange: function onChange() {
                                                     return _this3.upload(user.access_token);
                                                 } })
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'section',
-                        { className: 'resume-section p-3 p-lg-5 printloc', id: 'location', style: { marginRight: "-1.3%", backgroundColor: "165,197,238 " } },
-                        _react2.default.createElement(
-                            'p',
-                            { style: { marginLeft: "auto", marginRight: "auto", textAlign: "center" } },
-                            _react2.default.createElement('img', { src: 'img/location.png', style: { width: "15%", marginTop: "60px" }, className: 'auto' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { style: { marginLeft: "-4%", marginRight: "-3.8%" } },
-                            _react2.default.createElement(_reactBingmaps.ReactBingmaps, {
-                                bingmapKey: 'ApBMci7WkN2Da-QucJ20ohk4Z9lNZZ3drO5Z8vIoOO5xGP54wippfiscHdAT25cB'
-                                //center={-_infoboxesWithPushPins}
-                                //heading={180}
-
-                                , center: [-6.234662, 106.6043222],
-                                zoom: 14,
-                                infoboxesWithPushPins: _infoboxesWithPushPins
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'footMap' },
-                            _react2.default.createElement(
-                                'table',
-                                { style: { marginLeft: "150px" } },
-                                _react2.default.createElement(
-                                    'tbody',
-                                    null,
-                                    _react2.default.createElement(
-                                        'tr',
-                                        null,
-                                        _react2.default.createElement(
-                                            'td',
-                                            null,
-                                            _react2.default.createElement(
-                                                'p',
-                                                { style: { fontWeight: "bold" } },
-                                                ' CONTACT US'
-                                            )
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        'tr',
-                                        null,
-                                        _react2.default.createElement(
-                                            'td',
-                                            { style: { width: "70%" } },
-                                            _react2.default.createElement(
-                                                'p',
-                                                null,
-                                                'VIDIA PRINT',
-                                                _react2.default.createElement('br', null),
-                                                'Gd. Lippo Kuningan Lt.17 unit A & EF Jl. HR Rasuna Said KAV. B-12',
-                                                _react2.default.createElement('br', null),
-                                                'Karet Kuningan - Setiabudi Jakarta Selatan'
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'td',
-                                            { style: { width: "30%" } },
-                                            _react2.default.createElement(
-                                                'p',
-                                                { style: { marginLeft: "40px" } },
-                                                '(+62)21 55777678',
-                                                _react2.default.createElement('br', null),
-                                                'vidia@visionet.co.id'
-                                            )
                                         )
                                     )
                                 )
